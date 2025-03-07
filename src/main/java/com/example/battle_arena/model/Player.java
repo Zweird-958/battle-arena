@@ -11,7 +11,14 @@ public class Player {
     private String username;
     private int xp;
     private int health;
-    private int positionX;
-    private int positionY;
+    private Position position;
+
+    public void setPositionX(int x){
+        this.position.setX(x);
+    }
+
+    public void setPositionY(int y){
+        this.position.setY(y);
+    }
 }
 
