@@ -2,23 +2,20 @@ package com.example.battle_arena.model;
 
 import lombok.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class Player {
-    private Long id;
-    private String username;
-    private int xp;
-    private int health;
-    private Position position;
+    public int id;
+    public String name;
+    public int x;
+    public int y;
+    public int health;
+    public int xp = 0;
 
-    public void setPositionX(int x){
-        this.position.setX(x);
+    public void takeDamage(int damage) {
+        health -= damage;
     }
 
-    public void setPositionY(int y){
-        this.position.setY(y);
+    public void addXP(int xp) {
+        this.xp += xp;
     }
 }
-
