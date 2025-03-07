@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.4.3'
 	id 'io.spring.dependency-management' version '1.1.7'
+	id 'application'
 }
 
 group = 'com.example'
@@ -27,9 +28,14 @@ dependencies {
 	// Spring Boot Web pour créer une API REST
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
-	// Lombok pour générer automatiquement les getters/setters
+	// Lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// JavaFX (OpenJFX)
+	// Ajouter JavaFX
+	implementation 'org.openjfx:javafx-controls:21'
+	implementation 'org.openjfx:javafx-fxml:21'
 
 	// DevTools pour rechargement rapide en développement
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
